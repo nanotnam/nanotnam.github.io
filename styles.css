@@ -311,10 +311,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .home-layout, .document-view, .contact-view, .resume-view { padding: clamp(22px, 4vw, 42px); }
 .home-layout { height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #eee9d2, #d6d2b9); }
 .home-layout h1 { margin: 0; font-size: clamp(2.6rem, 6vw, 5rem); letter-spacing: -.06em; }
+.role-line { margin: 2px 0 8px; color: #4f5549; font-family: "Courier New", monospace; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 700; }
 .eyebrow { margin: 0 0 6px; color: #55574b; font-family: "Courier New", monospace; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .intro { max-width: 620px; margin: 10px 0 24px; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.55; }
 .button-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .retro-button {
+  display: inline-block;
   padding: 9px 15px;
   color: var(--ink);
   background: var(--panel);
@@ -323,6 +325,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-left-color: #fffbea;
   box-shadow: 2px 2px 0 #777665;
   cursor: pointer;
+  text-decoration: none;
 }
 .retro-button:active { border-color: var(--panel-dark) #fffbea #fffbea var(--panel-dark); box-shadow: none; transform: translate(1px, 1px); }
 .retro-button:disabled { opacity: .55; cursor: not-allowed; }
@@ -340,7 +343,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .project-card svg { width: 70px; height: 58px; float: left; margin: -5px 8px 0 -6px; }
 .project-card h3 { margin: 5px 0 12px; }
 .project-card p { clear: both; line-height: 1.45; }
-.project-card a, .contact-list a { color: #293f55; font-weight: 700; }
+.project-card a, .project-card .text-button, .contact-list a, .resume-view a:not(.retro-button) { color: #293f55; font-weight: 700; }
+.text-button {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .contact-view { display: grid; grid-template-columns: 115px 1fr; gap: 28px; align-items: start; }
 .contact-view h2 { margin: 0 0 12px; font-size: 2rem; }
@@ -355,6 +365,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .resume-view hr { margin: 20px 0; border: 0; border-top: 2px solid #888773; }
 .resume-view section { position: relative; }
 .date-range { float: right; color: #626257; font-family: monospace; }
+.resume-section + .resume-section { margin-top: 28px; padding-top: 4px; border-top: 1px dashed #999680; }
+.resume-entry { margin-bottom: 19px; }
+.resume-entry > p { margin: 5px 0; }
 
 .terminal-view { height: 100%; min-height: 260px; padding: 13px; overflow: auto; color: var(--terminal-text); background: var(--terminal); font-family: "Courier New", monospace; }
 .terminal-output { white-space: pre-wrap; line-height: 1.5; }
