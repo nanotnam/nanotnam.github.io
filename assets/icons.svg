@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="linux" viewBox="0 0 64 64">
+      <path fill="#171914" d="M22 18c0-10 4-15 10-15s10 5 10 15c6 7 9 17 7 28l7 7-4 6-12-8H24l-12 8-4-6 7-7c-2-11 1-21 7-28z"/>
+      <ellipse cx="32" cy="35" rx="12" ry="16" fill="#ddd5a8"/>
+      <circle cx="27" cy="15" r="3" fill="#f6f3da"/><circle cx="37" cy="15" r="3" fill="#f6f3da"/>
+      <circle cx="28" cy="15" r="1.5"/><circle cx="36" cy="15" r="1.5"/>
+      <path fill="#dba91b" stroke="#171914" stroke-width="2" d="m25 21 7-5 7 5-7 4zM23 50l-13 7 15 3 5-8zm18 0 13 7-15 3-5-8z"/>
+    </symbol>
+
+    <symbol id="folder-base" viewBox="0 0 96 80">
+      <path fill="#24251f" d="M5 17h7V8h29l8 9h40v55H5z" opacity=".75"/>
+      <path fill="#c7bd91" stroke="#282a23" stroke-width="3" d="M8 15V7h30l8 10h41v51H8z"/>
+      <path fill="#e4d9aa" stroke="#282a23" stroke-width="3" d="M4 22h87v52H4z"/>
+      <path fill="#f1e5b7" d="M8 26h79v5H8z" opacity=".75"/>
+    </symbol>
+    <symbol id="folder-home" viewBox="0 0 96 80">
+      <use href="#folder-base"/>
+      <path fill="#f5efd0" stroke="#282a23" stroke-width="3" d="m27 47 21-18 21 18v20H27z"/>
+      <path fill="#65705b" stroke="#282a23" stroke-width="3" d="M43 51h11v16H43z"/>
+      <path fill="none" stroke="#f5efd0" stroke-width="4" d="M66 31v13"/>
+    </symbol>
+    <symbol id="folder-about" viewBox="0 0 96 80">
+      <use href="#folder-base"/>
+      <path fill="#eee8cc" stroke="#282a23" stroke-width="3" d="M29 29h38v41H29z"/>
+      <path stroke="#59605a" stroke-width="4" d="M36 39h24M36 48h24M36 57h18"/>
+    </symbol>
+    <symbol id="folder-projects" viewBox="0 0 96 80">
+      <use href="#folder-base"/>
+      <path fill="#d5cfaa" stroke="#282a23" stroke-width="3" d="M25 31h48v32H25z"/>
+      <path fill="#59605a" d="M31 38h13v8H31zm18 0h18v4H49zm0 8h15v4H49zM31 52h36v5H31z"/>
+    </symbol>
+    <symbol id="folder-contact" viewBox="0 0 96 80">
+      <use href="#folder-base"/>
+      <path fill="#eee8cc" stroke="#282a23" stroke-width="3" d="M25 34h48v31H25z"/>
+      <path fill="none" stroke="#282a23" stroke-width="3" d="m27 37 22 18 22-18"/>
+    </symbol>
+    <symbol id="folder-resume" viewBox="0 0 96 80">
+      <use href="#folder-base"/>
+      <path fill="#eee8cc" stroke="#282a23" stroke-width="3" d="M30 27h37v44H30z"/>
+      <circle cx="41" cy="40" r="5" fill="#59605a"/><path fill="#59605a" d="M34 52c1-7 13-7 14 0zm19-15h10v3H53zm0 7h10v3H53zM36 58h27v3H36z"/>
+    </symbol>
+    <symbol id="terminal" viewBox="0 0 80 72">
+      <path fill="#1b1c19" stroke="#0c0d0b" stroke-width="3" d="M5 7h70v58H5z"/>
+      <path fill="#383934" stroke="#bdb99c" stroke-width="3" d="M9 11h62v48H9z"/>
+      <path fill="none" stroke="#e9dfb4" stroke-width="5" d="m20 25 9 8-9 8m14 5h17"/>
+    </symbol>
+    <symbol id="computer" viewBox="0 0 80 72">
+      <path fill="#bdb99c" stroke="#23251f" stroke-width="3" d="M8 6h55v46H8z"/>
+      <path fill="#515644" stroke="#23251f" stroke-width="3" d="M14 12h43v32H14z"/>
+      <path fill="#d9d2aa" stroke="#23251f" stroke-width="3" d="M21 52h29v9h12v6H9v-6h12z"/>
+      <path fill="#8c8b72" d="M18 16h35v5H18z" opacity=".45"/>
+    </symbol>
+    <symbol id="github" viewBox="0 0 72 72">
+      <path fill="#242622" stroke="#11120f" stroke-width="3" d="M6 6h60v60H6z"/>
+      <path fill="#f4f1dc" d="M36 16c-12 0-22 9-22 21 0 9 6 17 15 20v-6c-6 1-7-3-7-3-1-3-3-4-3-4-2-2 0-2 0-2 3 0 5 4 5 4 3 4 7 3 9 2 0-2 1-4 2-5-5-1-11-3-11-11 0-2 1-5 3-7-1-2-1-6 0-8 0 0 3-1 9 3a31 31 0 0 1 16 0c6-4 9-3 9-3 1 2 1 6 0 8 2 2 3 5 3 7 0 8-6 10-11 11 2 2 2 4 2 7v10c9-3 15-11 15-20 0-12-10-21-22-21z"/>
+    </symbol>
+    <symbol id="linkedin" viewBox="0 0 72 72">
+      <path fill="#45759a" stroke="#1d292d" stroke-width="3" d="M6 6h60v60H6z"/>
+      <path fill="#f4f1dc" d="M16 29h9v28h-9zm5-14a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm10 14h9v4c2-3 5-5 10-5 9 0 10 6 10 15v14h-9V44c0-5 0-9-5-9-6 0-6 4-6 9v13h-9z"/>
+    </symbol>
+    <symbol id="mail" viewBox="0 0 80 64">
+      <path fill="#d8cf9e" stroke="#23251f" stroke-width="3" d="M5 9h70v48H5z"/>
+      <path fill="none" stroke="#23251f" stroke-width="3" d="m8 12 32 26 32-26M8 54l23-22m41 22L49 32"/>
+    </symbol>
+    <symbol id="notes" viewBox="0 0 72 72">
+      <path fill="#e8ddac" stroke="#24251f" stroke-width="3" d="M10 9h49v57H10z"/>
+      <path stroke="#716e5a" stroke-width="2" d="M16 23h35M16 32h35M16 41h35M16 50h24"/>
+      <path fill="#262721" d="M16 3h4v12h-4zm10 0h4v12h-4zm10 0h4v12h-4zm10 0h4v12h-4z"/>
+      <path fill="#98723b" stroke="#24251f" stroke-width="2" d="m48 56 14-25 6 4-16 23-7 4z"/>
+    </symbol>
+    <symbol id="trash" viewBox="0 0 64 72">
+      <path fill="#777864" stroke="#252620" stroke-width="3" d="M12 19h42l-4 46H16z"/>
+      <path fill="#a8a589" stroke="#252620" stroke-width="3" d="M8 13h50v8H8zm14-7h22v7H22z"/>
+      <path stroke="#45463c" stroke-width="3" d="m23 28 2 29m10-29v29m9-29-2 29"/>
+    </symbol>
+    <symbol id="sound" viewBox="0 0 48 48">
+      <path fill="#252620" d="M5 19h9L26 9v30L14 29H5z"/>
+      <path fill="none" stroke="#252620" stroke-width="4" d="M32 17c4 4 4 10 0 14m5-20c8 8 8 18 0 26"/>
+    </symbol>
+  </defs>
+</svg>

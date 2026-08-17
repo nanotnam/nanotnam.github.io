@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#575846">
+  <meta name="description" content="A retro Linux desktop-inspired personal portfolio.">
+  <title>Your Name — Desktop Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#desktop">Skip to desktop</a>
+
+  <header class="top-panel" aria-label="System panel">
+    <div class="panel-start">
+      <button class="brand-button" type="button" data-open="home" aria-label="Open Home">
+        <svg class="panel-logo" aria-hidden="true"><use href="assets/icons.svg#linux"></use></svg>
+      </button>
+
+      <nav class="panel-menus" aria-label="Desktop menus">
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="applications-menu">Applications</button>
+          <div class="panel-menu" id="applications-menu" role="menu" hidden>
+            <button type="button" role="menuitem" data-open="home">Home</button>
+            <button type="button" role="menuitem" data-open="about">About</button>
+            <button type="button" role="menuitem" data-open="projects">Projects</button>
+            <button type="button" role="menuitem" data-open="contact">Contact</button>
+            <button type="button" role="menuitem" data-open="resume">Resume</button>
+            <button type="button" role="menuitem" data-open="terminal">Terminal</button>
+          </div>
+        </div>
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="places-menu">Places</button>
+          <div class="panel-menu" id="places-menu" role="menu" hidden>
+            <button type="button" role="menuitem" data-open="home">Home folder</button>
+            <button type="button" role="menuitem" data-open="projects">Project files</button>
+            <button type="button" role="menuitem" data-open="resume">Documents</button>
+          </div>
+        </div>
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="system-menu">System</button>
+          <div class="panel-menu" id="system-menu" role="menu" hidden>
+            <button type="button" role="menuitem" data-open="about">About this site</button>
+            <button type="button" role="menuitem" data-open="terminal">Run terminal</button>
+            <button type="button" role="menuitem" data-action="minimize-all">Show desktop</button>
+          </div>
+        </div>
+      </nav>
+
+      <span class="panel-separator" aria-hidden="true"></span>
+      <button class="quick-terminal" type="button" data-open="terminal" aria-label="Open Terminal">
+        <svg aria-hidden="true"><use href="assets/icons.svg#terminal"></use></svg>
+      </button>
+    </div>
+
+    <div class="panel-end">
+      <div class="workspaces" aria-label="Workspaces">
+        <button type="button" class="active" aria-pressed="true">1</button>
+        <button type="button" aria-pressed="false">2</button>
+        <button type="button" aria-pressed="false">3</button>
+        <button type="button" aria-pressed="false">4</button>
+      </div>
+      <span class="panel-separator" aria-hidden="true"></span>
+      <svg class="status-icon" aria-label="Sound on" role="img"><use href="assets/icons.svg#sound"></use></svg>
+      <svg class="status-icon" aria-label="Display connected" role="img"><use href="assets/icons.svg#computer"></use></svg>
+      <time id="clock" aria-label="Local date and time"></time>
+    </div>
+  </header>
+
+  <main class="desktop" id="desktop" aria-label="Portfolio desktop">
+    <section class="desktop-icons desktop-icons-left" aria-label="Desktop shortcuts">
+      <button class="desktop-icon" type="button" data-open="home">
+        <svg aria-hidden="true"><use href="assets/icons.svg#folder-home"></use></svg>
+        <span>home</span>
+      </button>
+      <button class="desktop-icon" type="button" data-open="about">
+        <svg aria-hidden="true"><use href="assets/icons.svg#folder-about"></use></svg>
+        <span>about</span>
+      </button>
+      <button class="desktop-icon" type="button" data-open="terminal">
+        <svg aria-hidden="true"><use href="assets/icons.svg#terminal"></use></svg>
+        <span>terminal</span>
+      </button>
+    </section>
+
+    <section class="desktop-icons desktop-icons-right" aria-label="More desktop shortcuts">
+      <button class="desktop-icon" type="button" data-open="projects">
+        <svg aria-hidden="true"><use href="assets/icons.svg#folder-projects"></use></svg>
+        <span>projects</span>
+      </button>
+      <button class="desktop-icon" type="button" data-open="contact">
+        <svg aria-hidden="true"><use href="assets/icons.svg#folder-contact"></use></svg>
+        <span>contact</span>
+      </button>
+      <button class="desktop-icon" type="button" data-open="resume">
+        <svg aria-hidden="true"><use href="assets/icons.svg#folder-resume"></use></svg>
+        <span>resume</span>
+      </button>
+    </section>
+
+    <div class="windows-layer" id="windows-layer" aria-live="polite"></div>
+  </main>
+
+  <nav class="dock" aria-label="Launcher dock">
+    <button type="button" class="dock-item" data-open="home" aria-label="Open Home" title="Home">
+      <svg aria-hidden="true"><use href="assets/icons.svg#computer"></use></svg>
+    </button>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <a class="dock-item" href="https://github.com/yourusername" target="_blank" rel="noreferrer" aria-label="GitHub profile (placeholder)" title="GitHub">
+      <svg aria-hidden="true"><use href="assets/icons.svg#github"></use></svg>
+    </a>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <a class="dock-item" href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" aria-label="LinkedIn profile (placeholder)" title="LinkedIn">
+      <svg aria-hidden="true"><use href="assets/icons.svg#linkedin"></use></svg>
+    </a>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <button type="button" class="dock-item" data-open="contact" aria-label="Open Contact" title="Email">
+      <svg aria-hidden="true"><use href="assets/icons.svg#mail"></use></svg>
+    </button>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <button type="button" class="dock-item" data-open="resume" aria-label="Open Resume" title="Resume">
+      <svg aria-hidden="true"><use href="assets/icons.svg#notes"></use></svg>
+    </button>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <button type="button" class="dock-item" data-action="minimize-all" aria-label="Show desktop" title="Show desktop">
+      <svg aria-hidden="true"><use href="assets/icons.svg#trash"></use></svg>
+    </button>
+  </nav>
+
+  <template id="template-home">
+    <div class="home-layout">
+      <p class="eyebrow">Hello, world.</p>
+      <h1>Your Name</h1>
+      <p class="intro">I build thoughtful digital products and enjoy turning difficult problems into simple, useful experiences.</p>
+      <div class="button-row">
+        <button class="retro-button" type="button" data-open="projects">View projects</button>
+        <button class="retro-button" type="button" data-open="contact">Get in touch</button>
+      </div>
+      <p class="placeholder-note">Replace this introduction with your own name, role, and short biography.</p>
+    </div>
+  </template>
+
+  <template id="template-about">
+    <article class="document-view">
+      <p class="eyebrow">README.txt</p>
+      <h2>About me</h2>
+      <p>I am a developer and designer interested in accessible interfaces, dependable software, and the details that make technology feel human.</p>
+      <h3>What I work with</h3>
+      <ul class="tag-list" aria-label="Skills">
+        <li>JavaScript</li><li>HTML &amp; CSS</li><li>Product design</li><li>Accessibility</li><li>Open source</li>
+      </ul>
+      <p class="placeholder-note">This is sample copy. Add your background, interests, and actual skills here.</p>
+    </article>
+  </template>
+
+  <template id="template-projects">
+    <div class="project-view">
+      <div class="window-toolbar"><span>3 items</span><span>View: icons</span></div>
+      <div class="project-grid">
+        <article class="project-card">
+          <svg aria-hidden="true"><use href="assets/icons.svg#folder-projects"></use></svg>
+          <h3>Project One</h3>
+          <p>A concise description of what you built and why it matters.</p>
+          <a href="#" aria-label="Project One placeholder link">Open project</a>
+        </article>
+        <article class="project-card">
+          <svg aria-hidden="true"><use href="assets/icons.svg#folder-projects"></use></svg>
+          <h3>Project Two</h3>
+          <p>Highlight your contribution, process, and a meaningful outcome.</p>
+          <a href="#" aria-label="Project Two placeholder link">Open project</a>
+        </article>
+        <article class="project-card">
+          <svg aria-hidden="true"><use href="assets/icons.svg#folder-projects"></use></svg>
+          <h3>Project Three</h3>
+          <p>Add a case study, experiment, or open-source contribution.</p>
+          <a href="#" aria-label="Project Three placeholder link">Open project</a>
+        </article>
+      </div>
+    </div>
+  </template>
+
+  <template id="template-contact">
+    <div class="contact-view">
+      <svg class="contact-stamp" aria-hidden="true"><use href="assets/icons.svg#mail"></use></svg>
+      <div>
+        <p class="eyebrow">New message</p>
+        <h2>Let’s work together.</h2>
+        <p>The easiest way to reach me is by email. You can also find me on the networks below.</p>
+        <dl class="contact-list">
+          <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/yourusername">@yourusername</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/yourusername">/in/yourusername</a></dd></div>
+        </dl>
+        <p class="placeholder-note">Replace these placeholder addresses before publishing.</p>
+      </div>
+    </div>
+  </template>
+
+  <template id="template-resume">
+    <article class="resume-view document-view">
+      <header class="resume-header">
+        <div><p class="eyebrow">CURRICULUM VITAE</p><h2>Your Name</h2><p>Your Role · Your Location</p></div>
+        <button class="retro-button" type="button" disabled title="Add a resume PDF to enable this action">Download PDF</button>
+      </header>
+      <hr>
+      <section><h3>Experience</h3><p><strong>Role Title</strong> — Company Name <span class="date-range">20XX–Present</span></p><p>Describe your responsibilities and the outcome of your work.</p></section>
+      <section><h3>Education</h3><p><strong>Degree or Program</strong> — School Name <span class="date-range">20XX</span></p></section>
+      <section><h3>Skills</h3><p>Languages, frameworks, tools, collaboration, and domain expertise.</p></section>
+      <p class="placeholder-note">All resume information shown here is placeholder content.</p>
+    </article>
+  </template>
+
+  <template id="template-terminal">
+    <div class="terminal-view">
+      <div class="terminal-output" role="log" aria-live="polite"></div>
+      <form class="terminal-form" autocomplete="off">
+        <label for="terminal-input"><span class="prompt">visitor@portfolio:~$</span><span class="sr-only">Command</span></label>
+        <input id="terminal-input" name="command" type="text" spellcheck="false" autocapitalize="none">
+      </form>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
