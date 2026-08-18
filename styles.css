@@ -90,7 +90,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   box-shadow: 0 2px 0 rgba(240, 238, 214, .35);
 }
 
-.panel-start, .panel-end, .panel-menus, .workspaces {
+.panel-start, .panel-end, .panel-menus {
   display: flex;
   align-items: center;
 }
@@ -143,23 +143,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .quick-terminal { width: 42px; height: 40px; padding: 4px; }
 .quick-terminal svg { width: 34px; height: 32px; }
 
-.workspaces button {
-  width: 48px;
-  height: 43px;
-  padding: 0;
-  color: var(--ink);
-  background: #d9d5bd;
-  border: 2px solid #737363;
-  border-top-color: var(--panel-light);
-  border-left-color: var(--panel-light);
-  font-size: 19px;
-  cursor: pointer;
-}
-.workspaces button.active {
-  color: #fff;
-  background: #6c6b5c;
-  border-color: #3f4038 var(--panel-light) var(--panel-light) #3f4038;
-}
 .status-icon { width: 28px; height: 28px; }
 #clock { min-width: 182px; font-size: 18px; text-align: right; }
 
@@ -382,7 +365,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   :root { --dock-height: 92px; }
   .panel-menus .menu-group:nth-child(n+2), .top-panel .quick-terminal, .top-panel .panel-separator, .status-icon { display: none; }
   .panel-end { gap: 7px; }
-  .workspaces button { width: 34px; }
   #clock { min-width: 120px; font-size: 14px; }
   .dock { bottom: 14px; height: var(--dock-height); gap: 7px; padding: 8px 12px; }
   .dock-item { width: 57px; height: 64px; }
@@ -400,8 +382,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .brand-button { width: 45px; height: 42px; padding: 4px; }
   .panel-logo { width: 34px; height: 34px; }
   .menu-trigger { padding: 0 8px; font-size: 16px; }
-  .workspaces button:nth-child(n+3) { display: none; }
-  .workspaces button { width: 30px; height: 35px; font-size: 15px; }
   #clock { min-width: auto; max-width: 75px; overflow: hidden; font-size: 12px; text-overflow: ellipsis; }
   .desktop { overflow: auto; }
   .desktop::after { position: fixed; height: 48px; }

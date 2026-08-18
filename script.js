@@ -281,16 +281,6 @@
     if (event.key === "Escape") closeMenus();
   });
 
-  document.querySelectorAll(".workspaces button").forEach((button) => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".workspaces button").forEach((item) => {
-        const active = item === button;
-        item.classList.toggle("active", active);
-        item.setAttribute("aria-pressed", String(active));
-      });
-    });
-  });
-
   function updateClock() {
     const clock = document.getElementById("clock");
     const now = new Date();
