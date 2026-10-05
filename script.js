@@ -1,14 +1,7 @@
 (() => {
   "use strict";
 
-  const applications = {
-    home: { title: "Home", icon: "folder-home", template: "template-home", width: 700, height: 430 },
-    about: { title: "About", icon: "folder-about", template: "template-about", width: 650, height: 480 },
-    projects: { title: "Projects", icon: "folder-projects", template: "template-projects", width: 810, height: 500 },
-    contact: { title: "Contact", icon: "folder-contact", template: "template-contact", width: 650, height: 430 },
-    resume: { title: "Resume", icon: "folder-resume", template: "template-resume", width: 700, height: 560 },
-    terminal: { title: "Terminal", icon: "terminal", template: "template-terminal", width: 680, height: 400 }
-  };
+  const applications = window.PORTFOLIO_CONFIG?.applications ?? {};
 
   const windows = new Map();
   const layer = document.querySelector("#windows-layer");
@@ -18,6 +11,30 @@
 
   function iconMarkup(icon) {
     return `<svg aria-hidden="true"><use href="assets/icons.svg#${icon}"></use></svg>`;
+  }
+
+  function renderLaunchers() {
+    Object.entries(applications).forEach(([appName, app]) => {
+      if (app.desktop) {
+        const container = document.querySelector(`[data-desktop="${app.desktop}"]`);
+        const launcher = document.createElement("button");
+        launcher.className = "desktop-icon";
+        launcher.type = "button";
+        launcher.dataset.open = appName;
+        launcher.innerHTML = `${iconMarkup(app.icon)}<span>${app.label ?? appName}</span>`;
+        container?.append(launcher);
+      }
+
+      app.menus?.forEach((menuName) => {
+        const menu = document.querySelector(`[data-menu="${menuName}"]`);
+        const item = document.createElement("button");
+        item.type = "button";
+        item.role = "menuitem";
+        item.dataset.open = appName;
+        item.textContent = app.title;
+        menu?.append(item);
+      });
+    });
   }
 
   function updateRunningState(appName, running) {
@@ -92,7 +109,12 @@
   }
 
   function openApp(appName, options = {}) {
-    if (!applications[appName]) return;
+    const app = applications[appName];
+    if (!app) return;
+    if (app.href) {
+      window.location.assign(app.href);
+      return;
+    }
     let windowElement = windows.get(appName);
     if (!windowElement) {
       windowElement = buildWindow(appName);
@@ -239,6 +261,8 @@
 
     windowElement.querySelector(".terminal-view").addEventListener("click", () => input.focus());
   }
+
+  renderLaunchers();
 
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest(".menu-trigger");

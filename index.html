@@ -20,22 +20,11 @@
       <nav class="panel-menus" aria-label="Desktop menus">
         <div class="menu-group">
           <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="applications-menu">Applications</button>
-          <div class="panel-menu" id="applications-menu" role="menu" hidden>
-            <button type="button" role="menuitem" data-open="home">Home</button>
-            <button type="button" role="menuitem" data-open="about">About</button>
-            <button type="button" role="menuitem" data-open="projects">Projects</button>
-            <button type="button" role="menuitem" data-open="contact">Contact</button>
-            <button type="button" role="menuitem" data-open="resume">Resume</button>
-            <button type="button" role="menuitem" data-open="terminal">Terminal</button>
-          </div>
+          <div class="panel-menu" id="applications-menu" data-menu="applications" role="menu" hidden></div>
         </div>
         <div class="menu-group">
           <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="places-menu">Places</button>
-          <div class="panel-menu" id="places-menu" role="menu" hidden>
-            <button type="button" role="menuitem" data-open="home">Home folder</button>
-            <button type="button" role="menuitem" data-open="projects">Project files</button>
-            <button type="button" role="menuitem" data-open="resume">Documents</button>
-          </div>
+          <div class="panel-menu" id="places-menu" data-menu="places" role="menu" hidden></div>
         </div>
         <div class="menu-group">
           <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="system-menu">System</button>
@@ -61,35 +50,9 @@
   </header>
 
   <main class="desktop" id="desktop" aria-label="Portfolio desktop">
-    <section class="desktop-icons desktop-icons-left" aria-label="Desktop shortcuts">
-      <button class="desktop-icon" type="button" data-open="home">
-        <svg aria-hidden="true"><use href="assets/icons.svg#folder-home"></use></svg>
-        <span>home</span>
-      </button>
-      <button class="desktop-icon" type="button" data-open="about">
-        <svg aria-hidden="true"><use href="assets/icons.svg#folder-about"></use></svg>
-        <span>about</span>
-      </button>
-      <button class="desktop-icon" type="button" data-open="terminal">
-        <svg aria-hidden="true"><use href="assets/icons.svg#terminal"></use></svg>
-        <span>terminal</span>
-      </button>
-    </section>
+    <section class="desktop-icons desktop-icons-left" data-desktop="left" aria-label="Desktop shortcuts"></section>
 
-    <section class="desktop-icons desktop-icons-right" aria-label="More desktop shortcuts">
-      <button class="desktop-icon" type="button" data-open="projects">
-        <svg aria-hidden="true"><use href="assets/icons.svg#folder-projects"></use></svg>
-        <span>projects</span>
-      </button>
-      <button class="desktop-icon" type="button" data-open="contact">
-        <svg aria-hidden="true"><use href="assets/icons.svg#folder-contact"></use></svg>
-        <span>contact</span>
-      </button>
-      <button class="desktop-icon" type="button" data-open="resume">
-        <svg aria-hidden="true"><use href="assets/icons.svg#folder-resume"></use></svg>
-        <span>resume</span>
-      </button>
-    </section>
+    <section class="desktop-icons desktop-icons-right" data-desktop="right" aria-label="More desktop shortcuts"></section>
 
     <div class="windows-layer" id="windows-layer" aria-live="polite"></div>
   </main>
@@ -222,6 +185,7 @@
     </div>
   </template>
 
+  <script src="site-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
