@@ -4,8 +4,22 @@ site_url: https://nanotnam.github.io/docs/
 docs_dir: docs
 
 theme:
-  name: mkdocs
-  locale: en
+  name: material
+  language: en
+  font: false
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  icon:
+    logo: material/folder-text
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
 
 nav:
   - Home: index.md
@@ -20,5 +34,14 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/retro.css
+
+repo_url: https://github.com/nanotnam/nanotnam.github.io
+repo_name: nanotnam.github.io
 
 strict: true

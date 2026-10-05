@@ -53,7 +53,9 @@ window.PORTFOLIO_CONFIG = {
       title: "Docs",
       label: "docs",
       icon: "folder-about",
-      href: "docs/",
+      template: "template-docs",
+      width: 810,
+      height: 500,
       desktop: "right",
       menus: ["applications", "places"]
     },

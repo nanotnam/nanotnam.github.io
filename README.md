@@ -2,7 +2,7 @@
 
 Personal portfolio and technical documentation published at [nanotnam.github.io](https://nanotnam.github.io/).
 
-The portfolio deliberately uses plain HTML, CSS, and JavaScript. MkDocs builds the Markdown files in `docs/` and publishes them at `/docs/`. A GitHub Actions workflow combines both parts into one GitHub Pages artifact.
+The portfolio deliberately uses plain HTML, CSS, and JavaScript. MkDocs Material builds the Markdown files in `docs/` and publishes them at `/docs/` with a custom retro theme. A GitHub Actions workflow combines both parts into one GitHub Pages artifact.
 
 ## Repository layout
 
